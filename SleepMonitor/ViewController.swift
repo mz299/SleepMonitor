@@ -7,13 +7,12 @@
 //
 
 import UIKit
+import HealthKit
 
 class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     let list = ["SleepInfo"]
+    let healthStore = HKHealthStore()
     
-    @IBAction func GetInfo(_ sender: Any) {
-        performSegue(withIdentifier: "segue", sender: self)
-    }
     public func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int{
         return(list.count)
         
@@ -33,6 +32,20 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        
+        let typestoRead = Set([
+            HKObjectType.categoryType(forIdentifier: HKCategoryTypeIdentifier.sleepAnalysis)!
+            ])
+        
+        let typestoShare = Set([
+            HKObjectType.categoryType(forIdentifier: HKCategoryTypeIdentifier.sleepAnalysis)!
+            ])
+        
+        self.healthStore.requestAuthorization(toShare: typestoShare, read: typestoRead) { (success, error) -> Void in
+            if success == false {
+                NSLog(" Display not allowed")
+            }
+        }
     }
 
     override func didReceiveMemoryWarning() {
