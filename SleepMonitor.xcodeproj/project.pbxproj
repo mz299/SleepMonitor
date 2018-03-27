@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		18625BC5204A49E000863B1E /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18625BC4204A49E000863B1E /* DetailViewController.swift */; };
+		18625BC7204A4BF200863B1E /* SleepTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18625BC6204A4BF200863B1E /* SleepTableViewCell.swift */; };
 		6E6184FA20313F0800F77A6F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E6184F920313F0800F77A6F /* AppDelegate.swift */; };
 		6E6184FC20313F0800F77A6F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E6184FB20313F0800F77A6F /* ViewController.swift */; };
 		6E6184FF20313F0800F77A6F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6E6184FD20313F0800F77A6F /* Main.storyboard */; };
@@ -15,6 +17,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		18625BC4204A49E000863B1E /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		18625BC6204A4BF200863B1E /* SleepTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SleepTableViewCell.swift; sourceTree = "<group>"; };
 		6E6184F620313F0800F77A6F /* SleepMonitor.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SleepMonitor.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6E6184F920313F0800F77A6F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6E6184FB20313F0800F77A6F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -57,9 +61,11 @@
 				6E6184F920313F0800F77A6F /* AppDelegate.swift */,
 				6E6184FB20313F0800F77A6F /* ViewController.swift */,
 				6E6184FD20313F0800F77A6F /* Main.storyboard */,
+				18625BC6204A4BF200863B1E /* SleepTableViewCell.swift */,
 				6E61850020313F0800F77A6F /* Assets.xcassets */,
 				6E61850220313F0800F77A6F /* LaunchScreen.storyboard */,
 				6E61850520313F0800F77A6F /* Info.plist */,
+				18625BC4204A49E000863B1E /* DetailViewController.swift */,
 			);
 			path = SleepMonitor;
 			sourceTree = "<group>";
@@ -136,8 +142,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				18625BC5204A49E000863B1E /* DetailViewController.swift in Sources */,
 				6E6184FC20313F0800F77A6F /* ViewController.swift in Sources */,
 				6E6184FA20313F0800F77A6F /* AppDelegate.swift in Sources */,
+				18625BC7204A4BF200863B1E /* SleepTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
