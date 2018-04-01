@@ -7,18 +7,14 @@
 //
 
 import UIKit
-import HealthKit
 
 class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     let list = ["SleepInfo"]
-    let healthStore = HKHealthStore()
-    
+
     public func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int{
         return(list.count)
         
     }
-    
-    
     
     public func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell{
 //        let cell = SleepTableViewCell(style: UITableViewCellStyle.default, reuseIdentifier:"cell")
@@ -28,23 +24,13 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         return cell
     }
     
-
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         
-        let typestoRead = Set([
-            HKObjectType.categoryType(forIdentifier: HKCategoryTypeIdentifier.sleepAnalysis)!
-            ])
-        
-        let typestoShare = Set([
-            HKObjectType.categoryType(forIdentifier: HKCategoryTypeIdentifier.sleepAnalysis)!
-            ])
-        
-        self.healthStore.requestAuthorization(toShare: typestoShare, read: typestoRead) { (success, error) -> Void in
-            if success == false {
-                NSLog(" Display not allowed")
-            }
+        HealthKitProvider.Instance.requestAuthorization()
+        SleepModel.Instance.loadData { (data) in
+//            reload table view
         }
     }
 
@@ -52,7 +38,5 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-
-
 }
 
