@@ -11,5 +11,7 @@ import Foundation
 typealias SleepDataHandler = (_ data: Array<SleepData>) -> Void
 
 struct SleepData {
-    
+    var startDate = Date()
+    var endDate = Date()
+    var value = ""
 }

@@ -7,25 +7,25 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		18625BC5204A49E000863B1E /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18625BC4204A49E000863B1E /* DetailViewController.swift */; };
-		18625BC7204A4BF200863B1E /* SleepTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18625BC6204A4BF200863B1E /* SleepTableViewCell.swift */; };
 		6E6184FA20313F0800F77A6F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E6184F920313F0800F77A6F /* AppDelegate.swift */; };
-		6E6184FC20313F0800F77A6F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E6184FB20313F0800F77A6F /* ViewController.swift */; };
+		6E6184FC20313F0800F77A6F /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E6184FB20313F0800F77A6F /* DetailViewController.swift */; };
 		6E6184FF20313F0800F77A6F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6E6184FD20313F0800F77A6F /* Main.storyboard */; };
 		6E61850120313F0800F77A6F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6E61850020313F0800F77A6F /* Assets.xcassets */; };
 		6E61850420313F0800F77A6F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6E61850220313F0800F77A6F /* LaunchScreen.storyboard */; };
 		6E672AA8206ACF5B0055F228 /* HealthKitProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E672AA7206ACF5B0055F228 /* HealthKitProvider.swift */; };
 		6E672AAC206AD0460055F228 /* SleepData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E672AAB206AD0460055F228 /* SleepData.swift */; };
 		6E672AAE206AD1550055F228 /* SleepModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E672AAD206AD1550055F228 /* SleepModel.swift */; };
+		6E6BEA50208823800005E24D /* DailyTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E6BEA4F208823800005E24D /* DailyTableViewController.swift */; };
+		6E6BEA52208828090005E24D /* DailyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E6BEA51208828090005E24D /* DailyViewController.swift */; };
+		6E6BEA5420883A790005E24D /* TimeIntervalExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E6BEA5320883A790005E24D /* TimeIntervalExt.swift */; };
+		6E8BEBD7207182FA00505DF4 /* FormatterExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E8BEBD6207182FA00505DF4 /* FormatterExt.swift */; };
 		6ED452AE2069DD23007C5CCF /* HealthKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6ED452AD2069DD23007C5CCF /* HealthKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		18625BC4204A49E000863B1E /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
-		18625BC6204A4BF200863B1E /* SleepTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SleepTableViewCell.swift; sourceTree = "<group>"; };
 		6E6184F620313F0800F77A6F /* SleepMonitor.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SleepMonitor.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6E6184F920313F0800F77A6F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		6E6184FB20313F0800F77A6F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		6E6184FB20313F0800F77A6F /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		6E6184FE20313F0800F77A6F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		6E61850020313F0800F77A6F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		6E61850320313F0800F77A6F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -33,6 +33,10 @@
 		6E672AA7206ACF5B0055F228 /* HealthKitProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealthKitProvider.swift; sourceTree = "<group>"; };
 		6E672AAB206AD0460055F228 /* SleepData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SleepData.swift; sourceTree = "<group>"; };
 		6E672AAD206AD1550055F228 /* SleepModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SleepModel.swift; sourceTree = "<group>"; };
+		6E6BEA4F208823800005E24D /* DailyTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyTableViewController.swift; sourceTree = "<group>"; };
+		6E6BEA51208828090005E24D /* DailyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyViewController.swift; sourceTree = "<group>"; };
+		6E6BEA5320883A790005E24D /* TimeIntervalExt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeIntervalExt.swift; sourceTree = "<group>"; };
+		6E8BEBD6207182FA00505DF4 /* FormatterExt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormatterExt.swift; sourceTree = "<group>"; };
 		6ED452AB2069DD23007C5CCF /* SleepMonitor.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = SleepMonitor.entitlements; sourceTree = "<group>"; };
 		6ED452AD2069DD23007C5CCF /* HealthKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HealthKit.framework; path = System/Library/Frameworks/HealthKit.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
@@ -78,7 +82,6 @@
 				6E61850020313F0800F77A6F /* Assets.xcassets */,
 				6E61850220313F0800F77A6F /* LaunchScreen.storyboard */,
 				6E61850520313F0800F77A6F /* Info.plist */,
-				18625BC4204A49E000863B1E /* DetailViewController.swift */,
 			);
 			path = SleepMonitor;
 			sourceTree = "<group>";
@@ -87,6 +90,8 @@
 			isa = PBXGroup;
 			children = (
 				6E672AA7206ACF5B0055F228 /* HealthKitProvider.swift */,
+				6E8BEBD6207182FA00505DF4 /* FormatterExt.swift */,
+				6E6BEA5320883A790005E24D /* TimeIntervalExt.swift */,
 			);
 			path = Plugins;
 			sourceTree = "<group>";
@@ -103,8 +108,9 @@
 		6E672AAA206ACFA60055F228 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				6E6184FB20313F0800F77A6F /* ViewController.swift */,
-				18625BC6204A4BF200863B1E /* SleepTableViewCell.swift */,
+				6E6184FB20313F0800F77A6F /* DetailViewController.swift */,
+				6E6BEA4F208823800005E24D /* DailyTableViewController.swift */,
+				6E6BEA51208828090005E24D /* DailyViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -144,7 +150,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0920;
-				LastUpgradeCheck = 0920;
+				LastUpgradeCheck = 0930;
 				ORGANIZATIONNAME = "Min Zeng";
 				TargetAttributes = {
 					6E6184F520313F0800F77A6F = {
@@ -194,13 +200,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				18625BC5204A49E000863B1E /* DetailViewController.swift in Sources */,
 				6E672AAC206AD0460055F228 /* SleepData.swift in Sources */,
-				6E6184FC20313F0800F77A6F /* ViewController.swift in Sources */,
+				6E6BEA52208828090005E24D /* DailyViewController.swift in Sources */,
+				6E8BEBD7207182FA00505DF4 /* FormatterExt.swift in Sources */,
+				6E6BEA50208823800005E24D /* DailyTableViewController.swift in Sources */,
+				6E6184FC20313F0800F77A6F /* DetailViewController.swift in Sources */,
 				6E672AAE206AD1550055F228 /* SleepModel.swift in Sources */,
 				6E672AA8206ACF5B0055F228 /* HealthKitProvider.swift in Sources */,
 				6E6184FA20313F0800F77A6F /* AppDelegate.swift in Sources */,
-				18625BC7204A4BF200863B1E /* SleepTableViewCell.swift in Sources */,
+				6E6BEA5420883A790005E24D /* TimeIntervalExt.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -240,6 +248,7 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
@@ -247,6 +256,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
@@ -297,6 +307,7 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
@@ -304,6 +315,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
