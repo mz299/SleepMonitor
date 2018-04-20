@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6E3B358B20895BB1003A558F /* AnalysisViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E3B358A20895BB1003A558F /* AnalysisViewController.swift */; };
 		6E6184FA20313F0800F77A6F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E6184F920313F0800F77A6F /* AppDelegate.swift */; };
 		6E6184FC20313F0800F77A6F /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E6184FB20313F0800F77A6F /* DetailViewController.swift */; };
 		6E6184FF20313F0800F77A6F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6E6184FD20313F0800F77A6F /* Main.storyboard */; };
@@ -23,6 +24,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		6E3B358A20895BB1003A558F /* AnalysisViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnalysisViewController.swift; sourceTree = "<group>"; };
 		6E6184F620313F0800F77A6F /* SleepMonitor.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SleepMonitor.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6E6184F920313F0800F77A6F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6E6184FB20313F0800F77A6F /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
@@ -111,6 +113,7 @@
 				6E6184FB20313F0800F77A6F /* DetailViewController.swift */,
 				6E6BEA4F208823800005E24D /* DailyTableViewController.swift */,
 				6E6BEA51208828090005E24D /* DailyViewController.swift */,
+				6E3B358A20895BB1003A558F /* AnalysisViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -204,6 +207,7 @@
 				6E6BEA52208828090005E24D /* DailyViewController.swift in Sources */,
 				6E8BEBD7207182FA00505DF4 /* FormatterExt.swift in Sources */,
 				6E6BEA50208823800005E24D /* DailyTableViewController.swift in Sources */,
+				6E3B358B20895BB1003A558F /* AnalysisViewController.swift in Sources */,
 				6E6184FC20313F0800F77A6F /* DetailViewController.swift in Sources */,
 				6E672AAE206AD1550055F228 /* SleepModel.swift in Sources */,
 				6E672AA8206ACF5B0055F228 /* HealthKitProvider.swift in Sources */,

@@ -13,45 +13,39 @@ class DetailViewController: UIViewController, UITableViewDelegate, UITableViewDa
     @IBOutlet weak var tableView: UITableView!
 
     public func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int{
-        let data = SleepModel.Instance.Data
-        let date = SleepModel.Instance.Date[section]
+        let data = SleepModel.Instance.SData
+        let date = SleepModel.Instance.SDate[section]
         return (data[date]?.count)!
         
     }
     
     public func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell{
         let cell = tableView.dequeueReusableCell(withIdentifier: "DetailCell", for: indexPath)
-        let data = SleepModel.Instance.Data
-        let date = SleepModel.Instance.Date[indexPath.section]
-        let item = data[date]![indexPath.row]
-        
-        let formatter = Formatter.localTime
-        let startTimeStr = formatter.string(from: item.startDate)
-        let endTimeStr = formatter.string(from: item.endDate)
-        cell.textLabel?.text = "\(startTimeStr) - \(endTimeStr)"
-        cell.detailTextLabel?.text = item.value
+        let date = SleepModel.Instance.SDate[indexPath.section]
+        cell.textLabel?.text = SleepModel.Instance.stringSleepStartEndTime(date: date, index: indexPath.row)
+        cell.detailTextLabel?.text = SleepModel.Instance.stringValue(date: date, index: indexPath.row)
         
         return cell
     }
     
     public func numberOfSections(in tableView: UITableView) -> Int {
-        return SleepModel.Instance.Date.count
+        return SleepModel.Instance.SDate.count
     }
     
     public func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-        return SleepModel.Instance.Date[section]
+        return SleepModel.Instance.SDate[section]
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         
-        HealthKitProvider.Instance.requestAuthorization()
-        SleepModel.Instance.loadData { (data) in
-            DispatchQueue.main.async {
-                self.tableView.reloadData()
-            }
-        }
+//        HealthKitProvider.Instance.requestAuthorization()
+//        SleepModel.Instance.loadData { (data) in
+//            DispatchQueue.main.async {
+//                self.tableView.reloadData()
+//            }
+//        }
     }
 
     override func didReceiveMemoryWarning() {

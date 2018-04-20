@@ -25,7 +25,7 @@ class DailyViewController: UIViewController, UITableViewDelegate, UITableViewDat
     
     public func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int{
         if section == 0 {
-            if let data = SleepModel.Instance.Data[passedValue] {
+            if let data = SleepModel.Instance.SData[passedValue] {
                 return data.count
             }
         }
@@ -41,49 +41,27 @@ class DailyViewController: UIViewController, UITableViewDelegate, UITableViewDat
         let cell = tableView.dequeueReusableCell(withIdentifier: "DailyDetailCell", for: indexPath)
         
         if indexPath.section == 0 {
-            if let data = SleepModel.Instance.Data[passedValue] {
-                let item = data[indexPath.row]
-                let formatter = Formatter.localTime
-                let startTimeStr = formatter.string(from: item.startDate)
-                let endTimeStr = formatter.string(from: item.endDate)
-                cell.textLabel?.text = "\(startTimeStr) - \(endTimeStr)"
-                cell.detailTextLabel?.text = item.value
-            }
+            cell.textLabel?.text = SleepModel.Instance.stringSleepStartEndTime(date: passedValue, index: indexPath.row)
+            cell.detailTextLabel?.text = SleepModel.Instance.stringValue(date: passedValue, index: indexPath.row)
         }
         
         if indexPath.section == 1 {
-            let data = SleepModel.Instance.Data[passedValue]
             switch indexPath.row {
             case 0:
                 cell.textLabel?.text = "Go to bed at"
-                let item = data![(data?.count)! - 1]
-                let formatter = Formatter.localTime
-                let startTimeStr = formatter.string(from: item.startDate)
-                cell.detailTextLabel?.text = startTimeStr
+                cell.detailTextLabel?.text = SleepModel.Instance.stringGoToBed(date: passedValue)
                 
             case 1:
                 cell.textLabel?.text = "Get up at"
-                let item = data![0]
-                let formatter = Formatter.localTime
-                let endTimeStr = formatter.string(from: item.endDate)
-                cell.detailTextLabel?.text = endTimeStr
+                cell.detailTextLabel?.text = SleepModel.Instance.stringGetUp(date: passedValue)
                 
             case 2:
-                cell.textLabel?.text = "Total sleep time"
-                var totalSleepTime:TimeInterval = 0.0
-                for item in data! {
-                    totalSleepTime = totalSleepTime + item.endDate.timeIntervalSince(item.startDate)
-                }
-                cell.detailTextLabel?.text = totalSleepTime.stringTime
+                cell.textLabel?.text = "Sleep for"
+                cell.detailTextLabel?.text = SleepModel.Instance.stringTotalSleepTime(date: passedValue)
                 
             case 3:
                 cell.textLabel?.text = "Woke up"
-                let wokeUpTime = max(0, (data?.count)! - 1)
-                if wokeUpTime > 1 {
-                    cell.detailTextLabel?.text = "\(wokeUpTime) Times"
-                } else {
-                    cell.detailTextLabel?.text = "\(wokeUpTime) Time"
-                }
+                cell.detailTextLabel?.text = SleepModel.Instance.stringWokeUpTime(date: passedValue)
                 
             default:
                 break

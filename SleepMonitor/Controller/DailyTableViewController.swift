@@ -36,7 +36,7 @@ class DailyTableViewController: UITableViewController {
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return SleepModel.Instance.Date.count
+        return SleepModel.Instance.SDate.count
     }
 
     
@@ -44,14 +44,14 @@ class DailyTableViewController: UITableViewController {
         let cell = tableView.dequeueReusableCell(withIdentifier: "DailyCell", for: indexPath)
         
         // Configure the cell...
-        let date = SleepModel.Instance.Date[indexPath.row]
+        let date = SleepModel.Instance.SDate[indexPath.row]
         cell.textLabel?.text = date
         
         return cell
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let date = SleepModel.Instance.Date[indexPath.row]
+        let date = SleepModel.Instance.SDate[indexPath.row]
         valueToPass = date
         
         performSegue(withIdentifier: "ShowDailyDetailSegue", sender: self)
