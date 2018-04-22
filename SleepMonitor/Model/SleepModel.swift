@@ -41,7 +41,7 @@ class SleepModel {
         _date.removeAll()
         HealthKitProvider.Instance.retrieveSleepAnalysis { (items) in
             if items != nil {
-//                 convert HKSample to SleepData
+//                convert HKSample to SleepData
                 for item in items! {
                     if let sample = item as? HKCategorySample {
                         var data = SleepData()
@@ -84,7 +84,7 @@ class SleepModel {
     
     func stringGoToBed(date: String) -> String {
         if let data = _data[date] {
-            let item = data[data.count - 1]
+            let item = data[0]
             let formatter = Formatter.localTime
             return formatter.string(from: item.startDate)
         }
@@ -93,7 +93,7 @@ class SleepModel {
     
     func stringGetUp(date: String) -> String {
         if let data = _data[date] {
-            let item = data[0]
+            let item = data[data.count - 1]
             let formatter = Formatter.localTime
             return formatter.string(from: item.endDate)
         }
@@ -101,14 +101,7 @@ class SleepModel {
     }
     
     func stringTotalSleepTime(date: String) -> String {
-        if let data = _data[date] {
-            var totalSleepTime: TimeInterval = 0.0
-            for item in data {
-                totalSleepTime += item.endDate.timeIntervalSince(item.startDate)
-            }
-            return totalSleepTime.stringTime
-        }
-        return ""
+        return sleepTime(date: date).stringTime
     }
     
     func stringWokeUpTime(date: String) -> String {
@@ -131,7 +124,7 @@ class SleepModel {
         var time: TimeInterval = 0.0
         for date in _date[0..<d] {
             if let data = _data[date] {
-                time += data[data.count - 1].startDate.timeIntervalSince1970
+                time += data[0].startDate.timeIntervalSince1970
             }
         }
         time /= Double(d)
@@ -147,7 +140,7 @@ class SleepModel {
         var time: TimeInterval = 0.0
         for date in _date[0..<d] {
             if let data = _data[date] {
-                time += data[0].endDate.timeIntervalSince1970
+                time += data[data.count - 1].endDate.timeIntervalSince1970
             }
         }
         time /= Double(d)
@@ -237,7 +230,7 @@ class SleepModel {
                 _date.append(dateString)
                 data[dateString] = [SleepData]()
             }
-            data[dateString]?.append(item)
+            data[dateString]?.insert(item, at: 0)
         }
         self._data = data
     }
