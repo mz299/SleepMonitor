@@ -16,19 +16,21 @@ class SleepModel {
         return _instance
     }
     
-    var _rawData = Array<SleepData>()
+    private var _rawData = Array<SleepData>()
     var RawData: Array<SleepData> {
         get {
             return _rawData
         }
     }
-    var _data = [String:[SleepData]]()
+    
+    private var _data = [String:[SleepData]]()
     var SData: [String:[SleepData]] {
         get {
             return _data
         }
     }
-    var _date = [String]()
+    
+    private var _date = [String]()
     var SDate: [String] {
         get {
             return _date
@@ -132,6 +134,7 @@ class SleepModel {
         let formatter = Formatter.localTime
         return formatter.string(from: avgDate)
     }
+    
     func stringAvgGetUp(days: Int) -> String {
         let d = min(days, _date.count)
         if d == 0 {
@@ -148,6 +151,7 @@ class SleepModel {
         let formatter = Formatter.localTime
         return formatter.string(from: avgDate)
     }
+    
     func stringAvgSleep(days: Int) -> String {
         let d = min(days, _date.count)
         if d == 0 {
@@ -160,6 +164,7 @@ class SleepModel {
         time /= Double(d)
         return time.stringTime
     }
+    
     func stringAvgWokeUp(days: Int) -> String {
         let d = min(days, _date.count)
         if d == 0 {
@@ -176,6 +181,7 @@ class SleepModel {
             return String(format: "%.2f Time", time)
         }
     }
+    
     func stringTotalSleep(days: Int) -> String {
         let d = min(days, _date.count)
         if d == 0 {
@@ -187,6 +193,7 @@ class SleepModel {
         }
         return time.stringTime
     }
+    
     func stringTotalWokeUp(days: Int) -> String {
         let d = min(days, _date.count)
         if d == 0 {
@@ -213,6 +220,7 @@ class SleepModel {
         }
         return 0
     }
+    
     private func wokeUpTime(date: String) -> Int {
         if let data = _data[date] {
             let wokeUpTime = max(0, data.count - 1)
